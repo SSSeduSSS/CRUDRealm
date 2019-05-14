@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:RealmXamarin.ViewModels"
+             x:Class="RealmXamarin.Views.DetallesMascota">
+    
+    
+    <ContentPage.BindingContext>
+        <viewmodels:MascotaModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="0,40,0,0">
+            
+            <Label Text="Detalles de la mascota"
+                   HorizontalOptions="Center"  FontSize="30" Opacity="0.5" TextColor="Crimson" />
+
+            <Frame OutlineColor="Gray"
+                   Margin="0,10,0,0">
+                <StackLayout>
+                    <Label Text="Identificación mascota" VerticalOptions="Center"/>
+                    <Label HorizontalOptions="FillAndExpand"
+                   FontSize="25" TextColor="Black"
+                           Text="{Binding Mascota.IdMascota}"/>
+                </StackLayout>                
+            </Frame>
+
+            <Frame OutlineColor="Gray"
+                   Margin="0,10,0,0">
+                <StackLayout>
+
+                    <Label Text="Nombre" VerticalOptions="Center"/>
+                    <Label HorizontalOptions="FillAndExpand" 
+                   FontSize="25" TextColor="Black"
+                           Text="{Binding Mascota.Nombre}"/>
+                    
+                </StackLayout>
+            </Frame>
+
+            <Frame OutlineColor="Gray"
+                   Margin="0,10,0,0">
+                <StackLayout>
+                    <Label Text="Raza" VerticalOptions="Center"/>
+                    <Label HorizontalOptions="FillAndExpand"
+                   FontSize="25" TextColor="Black"
+                           Text="{Binding Mascota.Raza}"/>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame OutlineColor="Gray"
+                   Margin="0,10,0,0">
+                <StackLayout>
+                    <Label Text="Anotaciones" VerticalOptions="Center"/>
+                    <Label HorizontalOptions="FillAndExpand" 
+                   FontSize="20" TextColor="Black"
+                           Text="{Binding Mascota.Anotaciones}"/>
+                </StackLayout>
+            </Frame>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewmodels="clr-namespace:RealmXamarin.ViewModels"
+             x:Class="RealmXamarin.Views.MascotasView">
+    
+    
+    <ContentPage.BindingContext>
+        <viewmodels:MascotaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout Margin="0,40,0,0">
+            <Label Text="Lista de mascotas en la BBDD" FontSize="20" Opacity="0.5" TextColor="Crimson" />
+            <ListView ItemsSource="{Binding Mascotas}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Raza}" TextColor="Green" FontSize="20"/>
+                                <Label Text="{Binding Nombre}" TextColor="Black" FontSize="20"
+                                       TextDecorations="Underline"/>
+                                <Label Text="{Binding IdMascota}" TextColor="Red" FontSize="20" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

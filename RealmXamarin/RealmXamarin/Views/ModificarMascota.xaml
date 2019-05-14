@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:RealmXamarin.ViewModels"
+             x:Class="RealmXamarin.Views.ModificarMascota">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MascotaModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Margin="0,40,0,0">
+            
+            <Label FontSize="40" TextColor="Fuchsia" Text="Modificar Mascota"
+                   HorizontalOptions="Center"/>
+            
+            <Label Text="Identificación Mascota " VerticalOptions="Center"/>
+            <Label HorizontalOptions="FillAndExpand"
+                   FontSize="20"
+                           Text="{Binding Mascota.IdMascota}"/>
+            
+            <Label Text="Nombre de la mascota" VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding Mascota.Nombre}"/>
+            
+            <Label Text="Raza mascota" VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding Mascota.Raza}"/>
+
+            <Label Text="Anotaciones mascota" VerticalOptions="Center"/>
+            <Entry HorizontalOptions="FillAndExpand"
+                           Text="{Binding Mascota.Anotaciones}"/>
+
+            <Button Text="Modificar Personaje" HorizontalOptions="FillAndExpand"
+                    Command="{Binding ModificarMascota}"/>
+            
+            <Label FontSize="25" TextColor="Blue"
+                   Text="{Binding Mensaje}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+
+</ContentPage>
