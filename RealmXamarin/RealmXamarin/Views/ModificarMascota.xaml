@@ -31,7 +31,7 @@
             <Entry HorizontalOptions="FillAndExpand"
                            Text="{Binding Mascota.Anotaciones}"/>
 
-            <Button Text="Modificar Personaje" HorizontalOptions="FillAndExpand"
+            <Button Text="Modificar Mascota" HorizontalOptions="FillAndExpand"
                     Command="{Binding ModificarMascota}"/>
             
             <Label FontSize="25" TextColor="Blue"

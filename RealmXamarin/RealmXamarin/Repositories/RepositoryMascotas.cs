@@ -60,7 +60,7 @@ namespace RealmXamarin.Repositories
                 m.Anotaciones = mEdit.Anotaciones;
 
 
-                transaction.Commit();//Confirmamos los cambios
+                trans.Commit();//Confirmamos los cambios
             }
         }
 
